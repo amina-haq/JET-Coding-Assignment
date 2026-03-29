@@ -12,6 +12,9 @@ layout.
 * Clear error message will appear if the postcode is invalid or no restaurants are found
 * “Clear Search” button only appears after performing a search
 
+## How It Works
+When the user enters a UK postcode in the search bar, the Flask app sends a request to the API to get restaurant data for that area. The JSON response from the API is parsed to extract only the relevant information: name, cuisines, rating, and address. The first 10 restaurants are displayed as individual cards on the webpage. The interface is designed to be simple and user-friendly, with a “Clear Search” button appearing after a search to allow users to easily start a new query.
+
 ## Installation
 
 To build and run the application, follow the outlined steps below:
