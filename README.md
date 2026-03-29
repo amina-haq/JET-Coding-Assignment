@@ -14,7 +14,7 @@ layout.
 
 ## How It Works
 
-When a user enters a UK postcode in the search bar, the Flask app sends a request to the Just Eat API to fetch restaurant data for that area. The JSON response from the API is parsed to extract only the relevant information: restaurant name, cuisines, rating, and address. The first 10 restaurants are displayed as individual cards on the webpage. The interface is designed to be simple and user-friendly, with a “Clear Search” button appearing after a search to allow users to easily start a new query.
+When the user enters a UK postcode in the search bar, the Flask app sends a request to the API to get restaurant data for that area. The JSON response from the API is parsed to extract only the relevant information: name, cuisines, rating, and address. The first 10 restaurants are displayed as individual cards on the webpage. The interface is designed to be simple and user-friendly, with a “Clear Search” button appearing after a search to allow users to easily start a new query.
 
 ## Installation
 
@@ -27,10 +27,10 @@ cd JET-Coding-Assignment
 ```
 
 *2) Install dependencies:*
+Run the below code in the terminal 
 ```bash
 pip install -r requirements.txt
 ```
-Run the above code in the terminal 
 
 *3) Run the Flask app:*
 ```bash
