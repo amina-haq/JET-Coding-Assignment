@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+            <!-- title -->
+            <h1>Restaurant Finder</h1>
+            
+            <!-- search bar -->
+            <form class="search-bar" method="get" action="{{ url_for('views.home') }}">
+                <div class="search-wrapper">
+                    <div class="search-segment">
+                        <input type="text" name="postcode" placeholder="Enter UK postcode to find top 10 restaurants" value="{{ postcode or '' }}" required>
+                    </div>
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <!-- clears search -->
+                {% if postcode %}
+                    <a href="{{ url_for('views.home') }}" class="clear-search">Clear Search</a>
+                {% endif %}
+            </form>
+            
+            <!-- error message -->
+            {% if message %}
+            <p class="message">{{ message }}</p>
+            {% endif %}
+        </div>
+
+        <!-- displays resaturants -->
+        <div class="content">
+            {% for r in restaurants %}
+            <div class="restaurant-card">
+                <h3>{{ r.name }}</h3>
+                <p><strong>Cuisines: </strong>{{ r.cuisines }}</p>
+                <p><i class="fas fa-star"></i> {{ r.rating }} </p>
+                <p class="address"><i class="fas fa-location-dot"></i> {{ r.address }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+/*----- Colours -----*/
+:root {
+    --colour-0: #735448;
+    --colour-1: #ff8000;
+    --colour-2: #555;
+    --colour-3: #fff;
+    --colour-4: #e5a278;
+    --colour-5: #efe8e2;
+    --colour-6: #FA0129;
+}
+
+body { 
+    position: relative;
+     margin: 0; 
+     padding: 0; 
+     background-color: var(--colour-5); }
+
+/*----- Layout -----*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrap {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*----- Header -----*/
+h1 {
+    color: var(--colour-1);
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-family: serif;
+    font-size: 3em;
+    font-weight: 300;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--colour-2);
+    padding-bottom: 10px;
+}
+
+/*----- Search Bar -----*/
+.search-bar {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--colour-0);
+    border-radius: 50px;
+    background-color: var(--colour-3);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-segment {
+    flex: 1;
+}
+
+.search-segment input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: var(--colour-2);
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    background-color: var(--colour-0);
+    color: var(--colour-3);
+    border: none;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    opacity: 0.8;
+}
+
+.clear-search {
+    margin-top: 10px;
+    margin-left: 19%;
+    margin-bottom: 40px;
+    float: left; 
+    text-decoration: underline;
+    color: var(--colour-0);
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.clear-search:hover {
+    color: var(--colour-4);
+    opacity: 0.8;
+}
+
+.message{
+    color: var(--colour-6); 
+    clear: both;
+}
+
+/*----- Restaurants -----*/
+.content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding-top: 5px;
+    clear: both;
+    margin: 80px auto;
+}
+
+.restaurant-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.2s ease;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.02);
+}
+
+.restaurant-card h3 {
+    font-family: serif;
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    color: var(--colour-1);
+}
+
+strong{
+    color: var(--colour-4);
+}
+
+.restaurant-card p i{
+    color: var(--colour-4);
+}
+
+.restaurant-card p.address{
+    margin-left: 2.5px;
+}
+
+.restaurant-card p {
+    margin: 7px 0;
+    color: var(--colour-2);
+}
